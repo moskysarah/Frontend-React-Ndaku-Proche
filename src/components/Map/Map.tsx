@@ -20,17 +20,21 @@ interface MapProps {
   zoom: number;
 }
 
-const Map: React.FC<MapProps> = ({ center, zoom }) => {
+// Utilisez vos coordonnées de position
+const centerCoordinates: [number, number] = [-4.344857363314129, 15.349629558896211];
+const zoomLevel = 13;  // Définissez le niveau de zoom souhaité
+
+const Map: React.FC<MapProps> = () => {
   return (
     <div className="h-[400px] w-full">
-      <MapContainer center={center} zoom={zoom} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
+      <MapContainer center={centerCoordinates} zoom={zoomLevel} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={center}>
+        <Marker position={centerCoordinates}>
           <Popup>
-            Beauty Salon <br /> We are here!
+            Beauty Salon <br /> Nous sommes ici !
           </Popup>
         </Marker>
       </MapContainer>
