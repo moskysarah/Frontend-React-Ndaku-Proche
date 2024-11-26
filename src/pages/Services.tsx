@@ -71,16 +71,18 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative h-80 bg-cover bg-center" style={{backgroundImage: "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Services-r0blrylgNxYiantW4P3mk6IYJuBrGJ.png')"}}>
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-5xl font-serif text-white">Nos Services</h1>
-        </div>
-      </section>
+       <h1 className="text-red-700 text-6xl text-center mt-2 font-imperial">
+              Service
+       </h1>
+      <img
+        src="/photo pretty glam/image service.jpg"
+        alt="image de la page service"
+        className="relative w-screen h-[500px] object-cover"
+      />
 
       {/* Services and Prices */}
       <section className="container mx-auto py-16 px-4">
-        <h2 className="text-3xl font-serif text-center mb-12">Services et Prix</h2>
+        <h2 className="text-3xl font-serif text-center mb-12 text-red-700">Services et Prix</h2>
         {services.map((service, index) => (
           <ServiceItem key={index} title={service.title} items={service.items} />
         ))}
