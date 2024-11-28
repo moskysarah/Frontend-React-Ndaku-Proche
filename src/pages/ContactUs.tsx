@@ -4,7 +4,7 @@ import BookingForm from '../components/BookingForm/BookingForm';
 import InstagramFeed from '../components/InstagramFeed/InstagramFeed';
 
 const ContactPage: React.FC = () => {
-  const salonLocation: [number, number] = [40.7128, -74.0060]; // Example: New York City coordinates
+  const salonLocation: [number, number] = [40.7128, -74.0060]; 
 
   return (
     <div className="bg-white">
