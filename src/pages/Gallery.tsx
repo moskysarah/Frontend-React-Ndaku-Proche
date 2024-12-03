@@ -30,10 +30,11 @@ const GalleryPage: React.FC = () => {
 
       {/* Images Grid */}
       <div className="container mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-3 aspect-square ">
+
         {[
-          "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698724/Img_13_mt2zkr.png",
-          "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698725/Img_14_skbxwm.png",
-          "https://res.cloudinary.com/dtpw00be5/image/upload/v1733184969/Img_27_udgu7q.png",
+              "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698724/Img_13_mt2zkr.png",
+              "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698725/Img_14_skbxwm.png",
+              "https://res.cloudinary.com/dtpw00be5/image/upload/v1733184969/Img_27_udgu7q.png",
           "https://res.cloudinary.com/dtpw00be5/image/upload/v1733184966/Img_28_rr6dzt.png",
           "https://res.cloudinary.com/dtpw00be5/image/upload/v1733184966/Img_29_gz5i3o.png",
           "https://res.cloudinary.com/dtpw00be5/image/upload/v1733184967/Img_31_ruh6ri.png",
@@ -41,7 +42,7 @@ const GalleryPage: React.FC = () => {
           "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698728/Img_20_usllbz.png",
           "https://res.cloudinary.com/dtpw00be5/image/upload/v1733185444/Card_8_yfzs2i.png",
         ].map((image, index) => (
-          <div key={index} className="overflow-hidden  ml-24 justify-start">
+          <div key={index} className="overflow-hidden  ml-24 ">
             <img src={image} alt={`Modèle ${index + 1}`} className="w-[250px] h-[250px] " />
           </div>
         ))}
