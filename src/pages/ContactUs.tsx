@@ -1,7 +1,7 @@
 import React from 'react';
-import Map from '../components/Map/Map';
 import BookingForm from '../components/BookingForm/BookingForm';
 import InstagramFeed from '../components/InstagramFeed/InstagramFeed';
+import MapCompronent from '../components/Map/Map';
 
 const ContactPage: React.FC = () => {
   const salonLocation: [number, number] = [40.7128, -74.0060]; 
@@ -9,15 +9,19 @@ const ContactPage: React.FC = () => {
   return (
     <div className="bg-white">
       <div className="container mx-auto py-12">
-        <h1 className="text-4xl font-serif text-center mb-8">Contact Us</h1>
+        <h1 className="text-4xl font-imperial text-center text-[#6B0606] mb-8">Contact</h1>
+        <p className="text-lg font-serif text-center text-black mb-4">
+            Excellence prometteuse dans tout ce que nous faisons venez et essayez
+        </p>
+        
 
-        <div>
+        <div className="w-full">
           <BookingForm />
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 ">
           <div>
-            <Map center={salonLocation} zoom={13} />
+            <MapCompronent center={salonLocation} zoom={13} />
           </div>
           <div>
             <div className="mt-4">

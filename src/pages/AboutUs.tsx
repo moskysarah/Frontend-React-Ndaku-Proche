@@ -86,17 +86,18 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      
+          <h1 className="text-4xl font-imperial text-center text-[#6B0606] mb-2">À propos</h1>
+       
       {/* Hero Section */}
-      <section className="relative h-[400px] bg-cover bg-center" style={{backgroundImage: "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/About%20Us%20(1)-gVW8QjyZVbk8h9C2MsxBqd8nTlNERq.png')"}}>
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-5xl font-serif text-white">À propos</h1>
-        </div>
+      <section className="relative h-[400px] bg-cover bg-center" style={{backgroundImage: "url('https://res.cloudinary.com/dtpw00be5/image/upload/v1733108309/Img_54_jxddhv.png')"}}>
+        
       </section>
 
       {/* About Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-serif text-center text-primary mb-12">
+          <h2 className="text-3xl font-serif text-center text-primary mb-12 text-[#6B0606]">
             Nous pouvons créer ce que vous imaginez
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

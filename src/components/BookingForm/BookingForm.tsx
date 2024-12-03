@@ -36,14 +36,14 @@ const BookingForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-muted/20 py-12">
-      <div className="container mx-auto max-w-4xl">
-        <div className="grid md:grid-cols-2 gap-1  bg-white rounded-lg shadow-md p-8">
-            <div className="relative h-[400px] bg-cover bg-center border" style={{backgroundImage: "url('https://cdn.pixabay.com/photo/2015/05/31/14/23/organizer-791939_1280.jpg')"}}>
+    <div className="bg-muted/20 py-12 mt-20">
+      <div className="container mx-auto max-w-4xl ">
+        <div className="grid md:grid-cols-2 gap-6 rounded-lg shadow-md p-8   ">
+            <div className="relative h-[400px] bg-cover bg-center border mt-2 border border-[#6B0606]" style={{backgroundImage: "url('https://res.cloudinary.com/dtpw00be5/image/upload/v1733107112/ca1bb25a0ecc6f96ecc39ffbc91b082e-removebg-preview_sfa6ul.png')"}}>
             </div>
         
-            <div className="bg-white rounded-lg">
-              <h2 className="text-2xl font-serif text-primary text-center mb-6">Prendre rendez-vous</h2>
+            <div className="bg-white rounded-lg ">
+              <h2 className="text-2xl font-serif text-primary text-center mb-6">Prenez rendez-vous</h2>
               <i className="text-sm text-gray-600">
                 Remplissez ce formulaire pour prendre rendez-vous avec notre salon de beauté.
                 Nous vous remercions de votre confiance.
@@ -116,7 +116,7 @@ const BookingForm: React.FC = () => {
                 </select>
                 <button
                   type="submit"
-                  className="bg-[#6B0606] text-white px-4 py-2 rounded md:col-span-2"
+                  className="bg-[#6B0606] text-white px-4 py-2 col-span-2"
                 >
                   Envoyer message
                 </button>

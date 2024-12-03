@@ -1,34 +1,47 @@
 import React from 'react';
 
-interface Feature {
-  icon: string;
-  title: string;
-  description: string;
-}
-
-const features: Feature[] = [
-  { icon: "👩‍🎨", title: "Professional Care", description: "Our expert stylists provide top-notch care" },
-  { icon: "🏆", title: "Premium Brands", description: "We use only the best beauty products" },
-  { icon: "🌿", title: "Natural Cosmetics", description: "Eco-friendly and skin-loving options available" },
+const products = [
+  { name: "Far à paupière", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732830164/Img_37_wvfvh6.png" },
+  { name: "Crème de nuit", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732830164/Img_38_sntlyx.png" },
+  { name: "Base de maquillage", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698727/Img_2_k6wjbj.png" },
+  { name: "Brosse de maquillage", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732831093/Img_41_zlnlnu.png" },
+  { name: "Blush visage", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698729/Img_45_msjix5.png" },
+  { name: "Rose à lèvre", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698729/Img_44_vajylm.png" },
+  { name: "Rouge à lèvre", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698729/Img_43_c4j2ql.png" },
+  { name: "Vernis à ongle", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698728/Img_42_upirzc.png" },
 ];
 
-const Features: React.FC = () => {
+const App: React.FC = () => {
   return (
-    <div className="bg-white py-16">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-serif text-center mb-12">Why Choose Us</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="min-h-screen bg-gray-100 p-5">
+      <header className="mb-10">
+        <nav className="flex justify-center space-x-5 text-sm font-medium text-gray-700">
+          <a href="#" className="text-[#6B0606] ">Tout nos produits</a>
+          <a href="#">Nail polishes</a>
+          <a href="#">Base de maquillage</a>
+          <a href="#">Rouge à lèvre</a>
+          <a href="#">Crème de nuit</a>
+          <a href="#">Mascaras</a>
+          <a href="#">Crayon à sourcil</a>
+        </nav>
+      </header>
+      <main className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+        {products.map((product, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow hover:shadow-lg transition p-3 text-center"
+          >
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-24 h-24 md:w-32 md:h-32 ml-14 object-contain rounded-md"
+            />
+            <h2 className="text-sm font-medium text-gray-800">{product.name}</h2>
+          </div>
+        ))}
+      </main>
     </div>
   );
-}
+};
 
-export default Features;
+export default App;

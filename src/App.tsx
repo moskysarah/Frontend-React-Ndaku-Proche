@@ -7,6 +7,7 @@ import 'leaflet/dist/leaflet.css';
 import ContactPage from './pages/ContactUs';
 import ServicesPage from './pages/Services';
 import AboutPage from './pages/AboutUs';
+import GalleryPage from './pages/Gallery';
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/galleryPage" element={<GalleryPage/>} />
         </Routes>
         <Footer />
       </div>

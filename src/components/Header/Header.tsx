@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Cart from '../Icons/Cart';
-import Social from '../Icons/SocialMedia';
+import Social from '../Icons/FacebookInstaHeader';
 const Header: React.FC = () => {
   return (
     <header>
@@ -13,19 +13,19 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-6">
           
           <div className="hidden md:flex space-x-6 items-center">
-            <Link to="/" className="text-sm">Accueil</Link>
-            <Link to="/services" className="text-sm">Services</Link>
+            <Link to="/" className="text-sm  hover:text-[#6B0606]  hover:border-[#6B0606] ">Accueil</Link>
+            <Link to="/services" className="text-sm  hover:text-[#6B0606]  hover:border-[#6B0606]">Services</Link>
             <Link to="/" className="p-2">
-                <img src="/photo pretty glam/logo pretty glam.png" 
+                <img src="public/photo pretty glam/pretty glam logo.PNG" 
                     alt="logo du site" 
-                    className="h-12 w-12  rounded-full  shadow-md" 
+                    className="h-12 w-12  rounded-full  shadow-lg border-[3px] border-[#6B0606] " 
                   />
             
             </Link>
 
             
-            <Link to="/about" className="text-sm">A propos</Link>
-            <Link to="/contact" className="text-sm">Contact</Link>
+            <Link to="/about" className="text-sm hover:text-[#6B0606]  hover:border-[#6B0606]">A propos</Link>
+            <Link to="/contact" className="text-sm hover:text-[#6B0606]  hover:border-[#6B0606]">Contact</Link>
           </div>
         </div>
         <div className="flex items-center space-x-4">

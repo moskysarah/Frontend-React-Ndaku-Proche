@@ -31,7 +31,7 @@ const InstagramFeed: React.FC = () => {
   return (
     <div className="bg-white py-16">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-serif text-center mb-12">Follow Us on Instagram</h2>
+        <h2 className="text-3xl font-serif text-center mb-12">Suivez-nous sur  Instagram</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {posts.map((post) => (
             <a key={post.id} href={post.permalink} target="_blank" rel="noopener noreferrer" className="block">
