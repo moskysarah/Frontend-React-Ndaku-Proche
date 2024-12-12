@@ -13,7 +13,7 @@ const AboutHero: React.FC = () => {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
 
-      {/* Contenu */}
+     
       <div className="relative z-10 flex flex-col items-center justify-center text-center text-white py-20 px-6 sm:py-32 sm:px-12">
         <h1 className="text-3xl sm:text-5xl font-bold mb-4">
           À propos de Ndaku Proche
