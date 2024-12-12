@@ -4,10 +4,10 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage';
 import 'leaflet/dist/leaflet.css';
-import ContactPage from './pages/ContactUs';
+import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/Services';
-import AboutPage from './pages/AboutUs';
-import GalleryPage from './pages/Gallery';
+import AboutPage from './pages/AboutPage';
+import PropertiesPage from './pages/Properties';
 
 const App: React.FC = () => {
   return (
@@ -17,9 +17,9 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/a-propos" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/galleryPage" element={<GalleryPage/>} />
+          <Route path="/Propreties" element={<PropertiesPage/>} />
         </Routes>
         <Footer />
       </div>
