@@ -4,10 +4,12 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage';
 import 'leaflet/dist/leaflet.css';
-import ContactPage from './pages/ContactPage';
-import ServicesPage from './pages/Services';
 import AboutPage from './pages/AboutPage';
-import PropertiesPage from './pages/Properties';
+import ServicesPage from './pages/Services';
+import ContactPage from './pages/ContactPage';
+import PropertyPage from './pages/PropertyPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 const App: React.FC = () => {
   return (
@@ -16,10 +18,12 @@ const App: React.FC = () => {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/a-propos" element={<AboutPage/>} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/a-propos" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/proprietes" element={<PropertiesPage/>} />
+          <Route path="/contact" element={< ContactPage/>} />
+          <Route path="/proprietes" element={<PropertyPage/>} />
+          <Route path="/connexion" element={<LoginPage/>} />
+          <Route path="/inscription" element={<RegisterPage/>} />
         </Routes>
         <Footer />
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Importer Link pour la navigation
 
 const properties = [
   {
@@ -46,9 +47,58 @@ const properties = [
     description: "Maison à une chambre salon, cuisine et salle de bain",
     image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515700/9609890d5f00fd956618130861c41c39_xxwupz.jpg",
   },
+
+  {
+    name: "Matete",
+    description: "Maison à trois chambres salon, cuisine et salle de dépôt",
+    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515653/39b9a2a55caca07a1223a9f078e6e5bd_q0swjn.jpg",
+  },
+  {
+    name: "Mont-Ngafula",
+    description: "Maison à deux chambres salon, salle de bain et magasin",
+    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515660/05213e3e61513bf19d41ced8eca31b36_s9dynp.jpg",
+  },
+  {
+    name: "Masina",
+    description: "Maison à une chambre salon, cuisine et salle de bain",
+    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515702/ad243eb0ba314bcf39b7e09017868388_ocntdb.jpg",
+  },
+  {
+    name: "Makala",
+    description: "Maison à trois chambres salon, cuisine et salle de dépôt",
+    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515653/39b9a2a55caca07a1223a9f078e6e5bd_q0swjn.jpg",
+  },
+  {
+    name: "Maluku",
+    description: "Maison à deux chambres salon, salle de bain et magasin",
+    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515660/05213e3e61513bf19d41ced8eca31b36_s9dynp.jpg",
+  },
+  {
+    name: "N'sele",
+    description: "Maison à une chambre salon, cuisine et salle de bain",
+    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515702/ad243eb0ba314bcf39b7e09017868388_ocntdb.jpg",
+  },
+  {
+    name: "Ndjili",
+    description: "Maison à trois chambres salon, cuisine et salle de dépôt",
+    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515653/39b9a2a55caca07a1223a9f078e6e5bd_q0swjn.jpg",
+  },
+  {
+    name: "Ngaba",
+    description: "Maison à deux chambres salon, salle de bain et magasin",
+    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515660/05213e3e61513bf19d41ced8eca31b36_s9dynp.jpg",
+  },
+  {
+    name: "Selembao",
+    description: "Maison à une chambre salon, cuisine et salle de bain",
+    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515702/ad243eb0ba314bcf39b7e09017868388_ocntdb.jpg",
+  },
+  
+  
+  
 ];
 
-const PropetiesPage: React.FC = () => {
+const PropertyPage: React.FC = () => {
   return (
     <div className="bg-gray-100 text-gray-900">
       <main>
@@ -61,11 +111,11 @@ const PropetiesPage: React.FC = () => {
           }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
           {/* Text content */}
           <div className="relative z-10 text-center text-white">
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-3xl font-bold">
               Le confort de votre maison contribue à votre bonheur
             </h2>
           </div>
@@ -101,9 +151,12 @@ const PropetiesPage: React.FC = () => {
                   <p className="text-gray-700 group-hover:text-white mb-4 transition-colors duration-300">
                     {property.description}
                   </p>
-                  <button className="px-4 py-2 bg-[#4A2501] hover:text-[#4A2501] hover:bg-white text-white rounded">
+                  <Link
+                     to={`/PropertiesDetails/${property.name}`}
+                    className="inline-block px-4 py-2 bg-[#4A2501] hover:text-[#4A2501] hover:bg-white text-white rounded"
+                  >
                     Réserver
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -114,4 +167,4 @@ const PropetiesPage: React.FC = () => {
   );
 };
 
-export default PropetiesPage;
+export default PropertyPage;

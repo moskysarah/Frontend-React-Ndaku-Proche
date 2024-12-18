@@ -74,7 +74,7 @@ const services: Service[] = [
 
 ];
 
-const Services: React.FC = () => {
+const ServicesPage: React.FC = () => {
   return (
     <section className="bg-gray-50">
       
@@ -122,4 +122,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default ServicesPage;

@@ -1,4 +1,8 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -12,13 +16,13 @@ const Footer: React.FC = () => {
           </p>
           <div className="flex space-x-4">
             <a href="#" className="hover:text-[#FFD700]">
-              <i className="fab fa-facebook-f"></i> {/* Icône Facebook */}
+              <FontAwesomeIcon icon={faFacebookF} className="text-2xl" />
             </a>
             <a href="#" className="hover:text-[#FFD700]">
-              <i className="fab fa-instagram"></i> {/* Icône Instagram */}
+              <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
             </a>
             <a href="#" className="hover:text-[#FFD700]">
-              <i className="fab fa-twitter"></i> {/* Icône Twitter */}
+              <FontAwesomeIcon icon={faTwitter} className="text-2xl" />
             </a>
           </div>
         </div>
@@ -49,9 +53,13 @@ const Footer: React.FC = () => {
         <div>
           <h2 className="text-lg font-semibold mb-4">Contact</h2>
           <p className="text-sm mb-4">+243 892 231 978</p>
-          <button className="bg-[#FFD700] text-[#4A2501] px-4 py-2 rounded-md hover:bg-[#FFA500] transition duration-300">
+          {/* Bouton "Contactez-nous" redirigeant vers la page Contact */}
+          <Link
+            to="/contact"
+            className="bg-[#FFD700] text-[#4A2501] px-4 py-2 rounded-md inline-block hover:bg-[#FFA500] transition duration-300"
+          >
             <i className="fas fa-envelope"></i> Contactez-nous
-          </button>
+          </Link>
         </div>
       </div>
 
