@@ -1,21 +1,22 @@
 import React from 'react';
 import Hero from '../components/Hero/Hero';
-import Services from '../components/Services/Services';
-import Testimonials from '../components/Testimonials/Testimonials';
-import VideoSection from '../components/VideoSections/VideoSections';
-import Shop from '../components/Shop/Shop';
-import InstagramFeed from '../components/InstagramFeed/InstagramFeed';
+import Features from '../components/Features/Features';
+import OffersSection from '../components/OffersSection/OfferSection';
+import PromoBanner from '../components/PromoBanner/PromoBanner';
+import IconsSection from '../components/IconsSection/IconsSection';
 
 
 const HomePage: React.FC = () => {
   return (
     <main>
       <Hero/>
-      <Services/>
-      <VideoSection/>
-      <Testimonials />
-      <Shop/>
-      <InstagramFeed />
+      <Features/>
+      <OffersSection/>
+      <PromoBanner/>
+      <IconsSection/>
+      
+      
+      
     </main>
   );
 }
