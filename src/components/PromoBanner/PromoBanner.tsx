@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const PromoBanner: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate("/details");
+  };
+
   return (
-    <section className="bg-[#EADDC8] py-6 px-4 ">
+    <section className="bg-[#EADDC8] py-6 px-4">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-around ml-6">
         {/* Image */}
         <div className="flex-shrink-0 mb-4 md:mb-0">
@@ -19,7 +26,10 @@ const PromoBanner: React.FC = () => {
             Harmonisez votre maison avec <br />
             une tendance à couper le souffle
           </h2>
-          <button className="mt-4 px-6 py-2 border border-[#4A2501] text-[#4A2501] rounded-md hover:bg-[#4A2501] hover:text-white transition-colors duration-300">
+          <button
+            onClick={handleNavigation}
+            className="mt-4 px-6 py-2 border border-[#4A2501] text-[#4A2501] rounded-md hover:bg-[#4A2501] hover:text-white transition-colors duration-300"
+          >
             Plus de détails
           </button>
         </div>

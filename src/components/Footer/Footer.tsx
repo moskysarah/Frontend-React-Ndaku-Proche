@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
             Votre partenaire idéale pour trouver une maison
           </p>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-[#FFD700]">
+            <a href="https://web.facebook.com/profile.php?id=61570366155971" className="hover:text-[#FFD700]">
               <FontAwesomeIcon icon={faFacebookF} className="text-2xl" />
             </a>
             <a href="#" className="hover:text-[#FFD700]">

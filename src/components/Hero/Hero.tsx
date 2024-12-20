@@ -27,17 +27,17 @@ const Hero: React.FC = () => {
         <img
           src="https://res.cloudinary.com/dtpw00be5/image/upload/v1733515652/27e1a91da6ab9ed2e09837cb08d77697_cdbt7q.jpg"
           alt="Hero Background"
-          className="w-full h-full object-cover"
+          className="w-full h-[415px] object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
 
       {/* Contenu du Hero */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center text-white py-20 px-6 sm:py-32 sm:px-12">
-        <h1 className="text-3xl sm:text-5xl font-bold mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold  mb-4">
           Votre partenaire de confiance pour trouver 
         </h1>
-        <p className="text-3xl sm:text-5xl font-bold mb-6">
+        <p className="text-3xl sm:text-4xl font-bold mb-6">
           La maison idéale au confort du design
         </p>
         <button

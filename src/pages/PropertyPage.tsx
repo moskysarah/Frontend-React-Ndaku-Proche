@@ -104,18 +104,18 @@ const PropertyPage: React.FC = () => {
       <main>
         {/* Hero Section */}
         <section
-          className="relative bg-cover bg-center h-96 flex items-center justify-center"
+          className="relative bg-cover bg-center w-full h-[415px] flex items-center justify-center"
           style={{
             backgroundImage:
               "url('https://res.cloudinary.com/dtpw00be5/image/upload/v1733515766/house_with_parents_l71ref.jpg')",
           }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
           {/* Text content */}
           <div className="relative z-10 text-center text-white">
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-3xl sm:text-4xl font-bold">
               Le confort de votre maison contribue à votre bonheur
             </h2>
           </div>
@@ -152,7 +152,7 @@ const PropertyPage: React.FC = () => {
                     {property.description}
                   </p>
                   <Link
-                     to={`/PropertiesDetails/${property.name}`}
+                     to={`/PropertyDetails/${property.name}`}
                     className="inline-block px-4 py-2 bg-[#4A2501] hover:text-[#4A2501] hover:bg-white text-white rounded"
                   >
                     Réserver
