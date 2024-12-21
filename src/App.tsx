@@ -12,6 +12,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DetailsPage from './pages/DetailsPage';
 import PropertyDetailsPage from './pages/PropertyDetailsPage';
+import SearchPage from './pages/SearchPage';
 
 const App: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const App: React.FC = () => {
           <Route path="/inscription" element={<RegisterPage/>} />
           <Route path="/details" element={<DetailsPage/>} />
           <Route path="/PropertyDetails/:propertyName" element={<PropertyDetailsPage />} />
+          <Route path="/recherche" element={<SearchPage />} />
         </Routes>
         <Footer />
       </div>
