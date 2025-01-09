@@ -21,15 +21,15 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-[#4A2501]">
+    <section className="relative bg-[#4A2501] pt-16">
       {/* Image de fond */}
       <div className="absolute inset-0">
         <img
           src="https://res.cloudinary.com/dtpw00be5/image/upload/v1733515652/27e1a91da6ab9ed2e09837cb08d77697_cdbt7q.jpg"
           alt="Hero Background"
-          className="w-full h-[415px] object-cover"
+          className="w-full h-[480px] object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       </div>
 
       {/* Contenu du Hero */}

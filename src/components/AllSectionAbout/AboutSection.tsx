@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12 mt-28 ">
+    <section className="max-w-6xl mx-auto px-4 py-12 mt-18 ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         {/* Image */}
         <img

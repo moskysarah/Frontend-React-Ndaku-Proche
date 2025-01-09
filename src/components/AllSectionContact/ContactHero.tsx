@@ -7,13 +7,13 @@ interface ContactHeroProps {
 
 const ContactHero: React.FC<ContactHeroProps> = ({ title, backgroundImage }) => {
   return (
-    <div className="relative w-full h-[72vh] text-white">
+    <div className="relative w-full h-[80vh] text-white">
      
       <div className="absolute inset-0">
         <img
           src={backgroundImage}
           alt="Hero Background"
-          className="w-full h-full object-cover"
+          className="w-full h-[480px] object-cover"
         />
         {/* Overlay noir avec opacité */}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>

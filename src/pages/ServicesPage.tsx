@@ -235,8 +235,9 @@ const ServicesPage: React.FC = () => {
         <img
           src="https://res.cloudinary.com/dxyolecju/image/upload/v1734537247/salon_hzvx1p.jpg"
           alt="Image Principale de la page service"
-          className="w-full h-[415px] object-cover bg-black bg-opacity-30"
+          className="w-full h-[480px] object-cover bg-black bg-opacity-40"
         />
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-white text-3xl sm:text-4xl font-bold text-center">
             Ndaku Proche vous accompagne
@@ -245,7 +246,7 @@ const ServicesPage: React.FC = () => {
       </div>
 
       <div className="py-12 px-6 text-center">
-        <h2 className="text-2xl font-bold text-[#4A2501] mb-6">
+        <h2 className="text-2xl font-bold text-[#4A2501] mb-10">
           Nos services d'accompagnement
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">

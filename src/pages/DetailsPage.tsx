@@ -22,8 +22,8 @@ const DetailsPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-6 flex flex-col items-center">
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">Détails sur la Décoration Intérieure</h1>
+    <div className="min-h-screen bg-gray-50 py-12 px-6 flex flex-col items-center mt-20">
+      <h1 className="text-xl font-bold text-gray-800 mb-6">Détails sur la Décoration Intérieure</h1>
       <div className="max-w-4xl bg-white shadow-md rounded-lg p-6 relative">
         <div className="relative group">
           <img

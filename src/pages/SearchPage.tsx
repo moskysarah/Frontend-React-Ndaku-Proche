@@ -105,7 +105,7 @@ const SearchPage: React.FC = () => {
   );
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto py-24">
       <h1 className="text-2xl font-bold mb-4">Résultats de recherche</h1>
       {searchQuery ? (
         <p className="mb-4">Résultats pour : <strong>{searchQuery}</strong></p>

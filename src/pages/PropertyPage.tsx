@@ -15,17 +15,17 @@ const properties = [
   {
     name: "Ngaliema",
     description: "Maison à trois chambres, salle à manger et salle de bain",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515578/1c27c3f33a680a04dcce85099910bab7_adew7r.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734891268/76b4717614ad47c70f163840ad46f607_wwvwht.jpg",
   },
   {
     name: "Bandal",
     description: "Maison à deux chambres salon, salle de bain et dépôt",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515578/1b09918045fb44bb3bda4eb25ec6cef3_slfqac.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734879001/dwcrzknozp3jn6dcmbi3.jpg",
   },
   {
     name: "Kinshasa",
     description: "Maison à trois chambres salon, cuisine et salle de jeux",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515583/05f68d1e36e9e54a589eabec75306fd2_seu6ii.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734879001/woexkrf7rtjibshwdkuw.jpg",
   },
   {
     name: "Kitambo",
@@ -51,32 +51,32 @@ const properties = [
   {
     name: "Matete",
     description: "Maison à trois chambres salon, cuisine et salle de dépôt",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515653/39b9a2a55caca07a1223a9f078e6e5bd_q0swjn.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734879000/u7ghscgrabhorhsrab6p.jpg",
   },
   {
     name: "Mont-Ngafula",
     description: "Maison à deux chambres salon, salle de bain et magasin",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515660/05213e3e61513bf19d41ced8eca31b36_s9dynp.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734879000/dfuhjdpyxnzubjc3vsmp.jpg",
   },
   {
     name: "Masina",
     description: "Maison à une chambre salon, cuisine et salle de bain",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515702/ad243eb0ba314bcf39b7e09017868388_ocntdb.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734879001/woexkrf7rtjibshwdkuw.jpg",
   },
   {
     name: "Makala",
     description: "Maison à trois chambres salon, cuisine et salle de dépôt",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515653/39b9a2a55caca07a1223a9f078e6e5bd_q0swjn.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734879000/cpeymurvpburnokg9z7k.jpg",
   },
   {
     name: "Maluku",
     description: "Maison à deux chambres salon, salle de bain et magasin",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515660/05213e3e61513bf19d41ced8eca31b36_s9dynp.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734878999/rtmrdhhpcdltvuqvait0.jpg",
   },
   {
     name: "N'sele",
     description: "Maison à une chambre salon, cuisine et salle de bain",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515702/ad243eb0ba314bcf39b7e09017868388_ocntdb.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734904875/098ad9b1aa10331b00900892d808c72f_uruorw.jpg",
   },
   {
     name: "Ndjili",
@@ -86,12 +86,12 @@ const properties = [
   {
     name: "Ngaba",
     description: "Maison à deux chambres salon, salle de bain et magasin",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515660/05213e3e61513bf19d41ced8eca31b36_s9dynp.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734904875/9c72a7ffdcaa4c37568d98b39bfe6750_jgzeih.jpg",
   },
   {
     name: "Selembao",
     description: "Maison à une chambre salon, cuisine et salle de bain",
-    image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515702/ad243eb0ba314bcf39b7e09017868388_ocntdb.jpg",
+    image: "https://res.cloudinary.com/dxyolecju/image/upload/v1734904875/26ac5568bae9beece7f8ae55a541446a_pqmzn5.jpg",
   },
   
   
@@ -100,11 +100,11 @@ const properties = [
 
 const PropertyPage: React.FC = () => {
   return (
-    <div className="bg-gray-100 text-gray-900">
+    <div className=" text-gray-900  pt-16">
       <main>
         {/* Hero Section */}
         <section
-          className="relative bg-cover bg-center w-full h-[415px] flex items-center justify-center"
+          className="relative bg-cover bg-center w-full h-[440px] flex items-center justify-center"
           style={{
             backgroundImage:
               "url('https://res.cloudinary.com/dtpw00be5/image/upload/v1733515766/house_with_parents_l71ref.jpg')",
@@ -142,7 +142,7 @@ const PropertyPage: React.FC = () => {
                 </div>
 
                 {/* Text overlay */}
-                <div className="absolute top-2 right-2 bg-black bg-opacity-60 text-white px-3 py-1 rounded-lg shadow-md">
+                <div className="absolute top-4 right-4 bg-black bg-opacity-60 text-white px-3 py-1  shadow-md">
                   <h3 className="text-sm font-bold">{property.name}</h3>
                 </div>
 

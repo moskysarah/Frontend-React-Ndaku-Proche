@@ -6,16 +6,16 @@ const Header: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1115);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [user, setUser] = useState<boolean>(false); // Utilisateur fictif pour la simulation
   const navigate = useNavigate();
 
-  // Gérer le redimensionnement de la fenêtre
+  // Gestion du redimensionnement
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth > 1115);
       if (window.innerWidth > 1115) {
-        setIsMenuOpen(false); // Fermer le menu burger en mode desktop
-        setIsSearchOpen(false); // Fermer l'icône de recherche en mode desktop
+        setIsMenuOpen(false);
+        setIsSearchOpen(false);
       }
     };
 
@@ -23,6 +23,7 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Gestion de la recherche
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
   };
@@ -36,8 +37,15 @@ const Header: React.FC = () => {
     }
   };
 
+  // Déconnexion simulée
+  const handleLogout = () => {
+    setUser(false); // Déconnecte l'utilisateur fictif
+    alert("Déconnexion réussie !");
+    navigate("/"); // Redirection après déconnexion
+  };
+
   return (
-    <header className="bg-[#4A2501] text-white py-4 relative">
+    <header className="fixed top-0 left-0 w-full bg-[#4A2501] text-white py-4 z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <h1 className="text-xl flex items-center space-x-2 flex-shrink-0">
@@ -51,13 +59,13 @@ const Header: React.FC = () => {
           </Link>
         </h1>
 
-        {/* Menu Burger Icon (Visible uniquement en mode mobile) */}
+        {/* Menu Burger Icon (Visible uniquement en mobile) */}
         {!isDesktop && (
           <button
-            className="flex items-center text-white focus:outline-none z-50 relative"
+            className="flex items-center text-white focus:outline-none z-50"
             onClick={() => {
               setIsMenuOpen(!isMenuOpen);
-              setIsSearchOpen(false); // Fermer l'icône de recherche en mode menu burger
+              setIsSearchOpen(false);
             }}
           >
             <svg
@@ -91,53 +99,77 @@ const Header: React.FC = () => {
           className={`${
             isDesktop
               ? "flex items-center space-x-8"
-              : `fixed top-0 left-0 w-full h-full bg-[#4A2501] flex flex-col items-center justify-center space-y-6 transition-all duration-300 ${
+              : `fixed top-0 left-0 w-full h-full bg-[#4A2501] flex flex-col items-center justify-center space-y-6 transition-transform duration-300 ${
                   isMenuOpen ? "translate-y-0" : "-translate-y-full"
                 }`
           }`}
         >
-          {[{ label: "Accueil", path: "/" },
-            { label: "À propos", path: "/a-propos" },
-            { label: "Services", path: "/services" },
-            { label: "Propriétés", path: "/proprietes" },
-            { label: "Contact", path: "/contact" },
-          ].map((link, index) => (
-            <Link
-              key={index}
-              to={link.path}
-              className={`${
-                isDesktop
-                  ? "hover:text-[#DFBB9B] transition-all duration-300"
-                  : "text-white text-xl hover:text-[#FFD700] text-center"
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-
-          <div
-            className={`${
-              isDesktop
-                ? "flex space-x-4"
-                : "flex flex-col items-center space-y-4"
-            }`}
+          {/* Liens de navigation */}
+          <Link
+            to="/"
+            className="hover:text-[#DFBB9B] transition-all duration-300"
+            onClick={() => setIsMenuOpen(false)}
           >
-            <Link
-              to="/connexion"
-              className="px-4 py-2 border border-[#FFF8F4] rounded-md hover:bg-[#FFF8F4] hover:text-[#4A2501] transition-all duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Se connecter
-            </Link>
-            <Link
-              to="/inscription"
-              className="px-4 py-2 border border-[#FFD700] rounded-md text-[#FFF8F4] hover:bg-[#FFD700] hover:text-[#4A2501] transition-all duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              S'inscrire
-            </Link>
-          </div>
+            Accueil
+          </Link>
+          <Link
+            to="/services"
+            className="hover:text-[#DFBB9B] transition-all duration-300"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Services
+          </Link>
+          <Link
+            to="/apropos"
+            className="hover:text-[#DFBB9B] transition-all duration-300"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            À propos
+          </Link>
+          <Link
+            to="/contact"
+            className="hover:text-[#DFBB9B] transition-all duration-300"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
+          </Link>
+          <Link
+            to="/proprietes"
+            className="hover:text-[#DFBB9B] transition-all duration-300"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Propriétés
+          </Link>
+
+          {user ? (
+            <>
+              {/* Lien vers le Dashboard */}
+              
+              {/* Bouton de déconnexion */}
+              <button
+                onClick={handleLogout}
+                className="px-4 py-2 border border-[#FFD700] rounded-md hover:bg-[#FFD700] hover:text-[#4A2501] transition-all duration-300"
+              >
+                Déconnexion
+              </button>
+            </>
+          ) : (
+            <>
+              {/* Boutons Se connecter et S'inscrire */}
+              <button
+                onClick={() => navigate("/login")}
+                className="px-4 py-2 bg-[#FFD700] text-[#4A2501] rounded-md hover:bg-[#4A2501] hover:text-white border border-[#FFD700] transition-all duration-300"
+              >
+                Se connecter
+              </button>
+              <button
+                onClick={() => navigate("/signup")}
+                className="px-4 py-2 bg-[#4A2501] text-white rounded-md hover:bg-[#FFD700] hover:text-[#4A2501] border border-[#FFD700] transition-all duration-300"
+              >
+                S'inscrire
+              </button>
+            </>
+          )}
         </nav>
 
         {/* Bouton et champ de recherche */}
@@ -176,7 +208,7 @@ const Header: React.FC = () => {
                 />
                 <button
                   type="submit"
-                  className="px-2 py-1 bg-[#4A2501] text-white hover:text-black  border border-[#FFD700] hover:bg-[#FFD700] transition-all"
+                  className="px-2 py-1 bg-[#4A2501] text-white hover:text-black border border-[#FFD700] hover:bg-[#FFD700] transition-all"
                 >
                   Rechercher
                 </button>
