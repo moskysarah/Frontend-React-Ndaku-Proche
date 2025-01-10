@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "allowImportingTsExtensions": true ,
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "bundler",
     "module": "ESNext",
-    "jsx": "react-jsx",  // Utilisez "react-jsx" pour React 17 ou supérieur
+    "jsx": "react-jsx", 
     "strict": true,
-    "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true // Ajout nécessaire pour "allowImportingTsExtensions"
   },
   "include": [
     "src/**/*"
