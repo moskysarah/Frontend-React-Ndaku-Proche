@@ -61,7 +61,7 @@ const LoginPage: React.FC<{ onLoginSuccess: (user: { email: string }) => void }>
             to="/signup"
             className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 block text-center"
           >
-            Créer nouveau compte
+            Créer un  nouveau compte
           </Link>
         </div>
       </div>

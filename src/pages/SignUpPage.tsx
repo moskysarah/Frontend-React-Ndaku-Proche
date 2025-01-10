@@ -9,6 +9,8 @@ const SignUpPage: React.FC = () => {
     password: '',
   });
 
+  const [showModal, setShowModal] = useState(false); // État pour afficher ou masquer le pop-up
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -20,13 +22,17 @@ const SignUpPage: React.FC = () => {
       alert('Veuillez remplir tous les champs.');
       return;
     }
-    // Simulate sign-up authentication
-    alert(`Inscription réussie pour : ${firstName} ${lastName} (${email})`);
+    // Simulate successful sign-up
+    setShowModal(true); // Affiche le modal
+  };
+
+  const closeModal = () => {
+    setShowModal(false); // Ferme le modal
   };
 
   return (
-    <div className="flex flex-col items-center p-6 font-sans">
-      <h2 className="text-lg font-bold mb-20">Bienvenue à notre site Ndaku proche !</h2>
+    <div className="flex flex-col items-center p-6 font-sans mt-10">
+      <h2 className="text-lg font-bold mb-6">Bienvenue à notre site Ndaku proche !</h2>
 
       <div className="w-full max-w-md">
         <input
@@ -35,7 +41,7 @@ const SignUpPage: React.FC = () => {
           placeholder="Nom"
           value={formData.firstName}
           onChange={handleInputChange}
-          className="w-full mb-4 px-4 py-2 border border-brown-500 rounded focus:outline-none focus:ring focus:ring-brown-200"
+          className="w-full mb-4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-gray-200"
         />
       </div>
 
@@ -46,7 +52,7 @@ const SignUpPage: React.FC = () => {
           placeholder="Prénom"
           value={formData.lastName}
           onChange={handleInputChange}
-          className="w-full mb-4 px-4 py-2 border border-brown-500 rounded focus:outline-none focus:ring focus:ring-brown-200"
+          className="w-full mb-4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-gray-200"
         />
       </div>
 
@@ -57,7 +63,7 @@ const SignUpPage: React.FC = () => {
           placeholder="Adresse-mail"
           value={formData.email}
           onChange={handleInputChange}
-          className="w-full mb-4 px-4 py-2 border border-brown-500 rounded focus:outline-none focus:ring focus:ring-brown-200"
+          className="w-full mb-4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-gray-200"
         />
       </div>
 
@@ -68,7 +74,7 @@ const SignUpPage: React.FC = () => {
           placeholder="Téléphone"
           value={formData.phone}
           onChange={handleInputChange}
-          className="w-full mb-4 px-4 py-2 border border-brown-500 rounded focus:outline-none focus:ring focus:ring-brown-200"
+          className="w-full mb-4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-gray-200"
         />
       </div>
 
@@ -79,16 +85,33 @@ const SignUpPage: React.FC = () => {
           placeholder="Mot de passe"
           value={formData.password}
           onChange={handleInputChange}
-          className="w-full mb-4 px-4 py-2 border border-brown-500 rounded focus:outline-none focus:ring focus:ring-brown-200"
+          className="w-full mb-4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-gray-200"
         />
       </div>
 
       <button
-        className="px-6 py-2 bg-brown-500 text-white rounded hover:bg-brown-600"
+        className="px-6 py-2 bg-[#4A2501] text-white rounded hover:bg-gray-900"
         onClick={handleSignUp}
       >
         S’inscrire
       </button>
+
+      {/* Pop-up modal */}
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg p-8 shadow-lg text-center">
+            <h2 className="text-lg font-bold mb-4">Inscription réussie 🎉</h2>
+            <p>Bienvenue, {formData.firstName} {formData.lastName} !</p>
+            <p className="mt-2">Votre email : {formData.email}</p>
+            <button
+              className="mt-4 px-4 py-2 bg-[#4A2501] text-white rounded hover:bg-gray-900"
+              onClick={closeModal}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

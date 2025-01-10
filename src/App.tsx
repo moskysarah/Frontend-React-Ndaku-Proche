@@ -11,14 +11,14 @@ import DetailsPage from "./pages/DetailsPage";
 import PropertyDetailsPage from "./pages/PropertyDetailsPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
-
-
 import SearchPage from "./pages/SearchPage";
 import "./App.css";
 import "leaflet/dist/leaflet.css";
-
-
 const App: React.FC = () => {
+  const handleLoginSuccess = (user: { email: string }) => {
+    console.log("Utilisateur connecté :", user.email);
+  };
+
   return (
     <Router>
       <div className="min-h-screen bg-white">
@@ -30,16 +30,23 @@ const App: React.FC = () => {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/proprietes" element={<PropertyPage />} />
           <Route path="/details" element={<DetailsPage />} />
-          <Route path="/PropertyDetails/:propertyName" element={<PropertyDetailsPage />} />
+          <Route
+            path="/PropertyDetails/:propertyName"
+            element={<PropertyDetailsPage />}
+          />
           <Route path="/recherche" element={<SearchPage />} />
-          <Route path="/signup" element={<SignUpPage/>} />
-          <Route path="/login" element={<LoginPage />} />
-          
+          <Route path="/signup" element={<SignUpPage />} />
+          {/* Passez `onLoginSuccess` au composant LoginPage */}
+          <Route
+            path="/login"
+            element={<LoginPage onLoginSuccess={handleLoginSuccess} />}
+          />
         </Routes>
         <Footer />
       </div>
     </Router>
   );
 };
+
 
 export default App;
