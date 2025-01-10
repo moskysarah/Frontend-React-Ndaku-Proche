@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12 mt-18 ">
+    <section className="max-w-6xl mx-auto px-4 py-12 mt-18  ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         {/* Image */}
         <img
@@ -12,7 +12,7 @@ const AboutSection: React.FC = () => {
         />
         {/* Texte */}
         <div>
-          <h3 className="text-2xl font-bold text-[#4A2501] mb-6 ">
+          <h3 className="text-2xl font-bold text-[#4A2501] mb-6  ">
             Notre mission
           </h3>
           <p className="text-gray-700 leading-relaxed  text-sm2 ">

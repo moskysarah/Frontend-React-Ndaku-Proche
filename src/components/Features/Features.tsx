@@ -46,7 +46,7 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-white">
       <h1 className="text-center text-[#4A2501] text-2xl font-bold mb-8">
         Découvrez nos offres et trouvez la maison de vos rêves, adaptée à vos besoins !
       </h1>

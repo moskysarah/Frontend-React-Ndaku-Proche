@@ -1,9 +1,8 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const PropertyDetailsPage: React.FC = () => {
   const { propertyName } = useParams<{ propertyName: string }>();
-  const navigate = useNavigate(); // Hook pour la navigation
 
   const properties = [
     {
@@ -24,27 +23,20 @@ const PropertyDetailsPage: React.FC = () => {
       image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515578/1c27c3f33a680a04dcce85099910bab7_adew7r.jpg",
       price: 450,
     },
-    // Ajoutez les autres propriétés ici...
   ];
 
   // Recherche de la propriété par son nom
   const property = properties.find((p) => p.name.toLowerCase() === propertyName?.toLowerCase());
 
-  // Si la propriété n'est pas trouvée, afficher un message
   if (!property) {
     return <div className="text-center">Propriété non trouvée</div>;
   }
-
-  // Fonction de réservation
-  const handleReservation = () => {
-    navigate("/reservation", { state: { property } }); // Redirection vers la page de réservation
-  };
 
   return (
     <div className="bg-gray-100 text-gray-900">
       <div
         className="relative bg-cover bg-center w-full h-[415px]"
-        style={{ backgroundImage: `url(${property.image || ''})` }}
+        style={{ backgroundImage: `url(${property.image || ""})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <h1 className="text-white text-3xl font-bold">{property.name}</h1>
@@ -56,12 +48,13 @@ const PropertyDetailsPage: React.FC = () => {
         <p className="text-lg font-semibold text-gray-800 mt-4">
           Prix: <span className="text-green-600">${property.price?.toLocaleString() || "Non disponible"}</span>
         </p>
-        <button
-          onClick={handleReservation}
-          className="mt-6 px-4 py-2 bg-[#4A2501] text-white rounded hover:bg-[#3e1e01]"
+        <Link
+          to="/contact"
+          state={{ property }}
+          className="mt-6 px-4 py-2 inline-block bg-[#4A2501] text-white rounded hover:bg-[#3e1e01]"
         >
           Confirmer la réservation
-        </button>
+        </Link>
       </div>
     </div>
   );

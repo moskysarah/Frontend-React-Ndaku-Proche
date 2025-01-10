@@ -21,15 +21,15 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-[#4A2501] pt-16">
+    <section className="relative pt-16">
       {/* Image de fond */}
       <div className="absolute inset-0">
         <img
           src="https://res.cloudinary.com/dtpw00be5/image/upload/v1733515652/27e1a91da6ab9ed2e09837cb08d77697_cdbt7q.jpg"
           alt="Hero Background"
-          className="w-full h-[480px] object-cover"
+          className="w-full h-[480px] object-cover border-b-4 border-[#4A2501]"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="relative inset-0 bg-black bg-opacity-30"></div>
       </div>
 
       {/* Contenu du Hero */}
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           Votre partenaire de confiance pour trouver 
         </h1>
         <p className="text-3xl sm:text-4xl font-bold mb-6">
-          La maison idéale au confort du design
+          La maison idéale au confort parfait
         </p>
         <button
           onClick={handleVoirPlusClick}

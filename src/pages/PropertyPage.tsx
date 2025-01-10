@@ -111,7 +111,7 @@ const PropertyPage: React.FC = () => {
           }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-40  border-b-4 border-[#4A2501]"></div>
 
           {/* Text content */}
           <div className="relative z-10 text-center text-white">

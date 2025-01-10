@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutHero: React.FC = () => {
   return (
-    <section className="relative bg-[#4A2501] pt-20">
+    <section className="relative pt-20">
       
       <div className="absolute inset-0">
         <img
@@ -10,7 +10,7 @@ const AboutHero: React.FC = () => {
           alt="Hero Background"
           className="w-full h-[480px] object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="relative inset-0 border-b-4 border-[#4A2501] bg-black bg-opacity-30"></div>
 
       </div>
       
