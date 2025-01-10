@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "allowImportingTsExtensions": true ,
     "module": "ESNext",
     "jsx": "react-jsx",  // Utilisez "react-jsx" pour React 17 ou supérieur
     "strict": true,
