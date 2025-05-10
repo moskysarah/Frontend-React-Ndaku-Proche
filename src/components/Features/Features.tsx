@@ -1,47 +1,90 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const products = [
-  { name: "Far à paupière", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732830164/Img_37_wvfvh6.png" },
-  { name: "Crème de nuit", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732830164/Img_38_sntlyx.png" },
-  { name: "Base de maquillage", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698727/Img_2_k6wjbj.png" },
-  { name: "Brosse de maquillage", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732831093/Img_41_zlnlnu.png" },
-  { name: "Blush visage", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698729/Img_45_msjix5.png" },
-  { name: "Rose à lèvre", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698729/Img_44_vajylm.png" },
-  { name: "Rouge à lèvre", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698729/Img_43_c4j2ql.png" },
-  { name: "Vernis à ongle", image: "https://res.cloudinary.com/dtpw00be5/image/upload/v1732698728/Img_42_upirzc.png" },
-];
+const Features: React.FC = () => {
+  const features = [
+    {
+      title: "Vente meubles",
+      description:
+        "Transformer votre maison avec des meubles qui offrent des designs modernes,  de haute qualité.",
+      imageUrl:
+        "https://res.cloudinary.com/dxyolecju/image/upload/v1734882271/7c6ce94b5cf148bef92ee99371d27f75_fajend.jpg",
+    },
+    {
+      title: "Décoration intérieure",
+      description: "Transformez votre espace en une sanctuaire de style avec nos expert(es) en design",
+      imageUrl:
+        "https://res.cloudinary.com/dxyolecju/image/upload/v1734528757/woman_designer_m8lldl.jpg",
+    },
+    {
+      title: "Location de maisons ",
+      description:
+        "Restez informé des dernières actualités et tendances du marché immobilier.",
+      imageUrl:
+        "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515699/033809ad0f0ff94e1a357496b86ace04_lnex3e.jpg",
+    },
+    {
+      title: "Nettoyage Professionnel",
+      description:
+        "Confiez l’entretien de vos espaces à des experts du nettoyage professionnel.",
+      imageUrl:
+        "https://res.cloudinary.com/dxyolecju/image/upload/v1734878999/nhwui7vbb34wcdkhfp0a.jpg",
+    },
+    {
+      title: "Aide au déménagement",
+      description:
+        "Simplifiez votre déménagement avec notre service d’aide professionnel et fiable.",
+      imageUrl:
+        "https://res.cloudinary.com/dxyolecju/image/upload/v1734879000/knnxaormhjmbh9hcl9zi.jpg",
+    },
+    {
+      title: "Actualités et tendances immobilières",
+      description: "Trouvez la maison idéale grâce à notre expertise",
+      imageUrl:
+        "https://res.cloudinary.com/dtpw00be5/image/upload/v1733515585/7c1cf61f72904a8aa6e0f903a36612b9_uyrnd4.jpg",
+    },
+  ];
 
-const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-5">
-      <header className="mb-10">
-        <nav className="flex justify-center space-x-5 text-sm font-medium text-gray-700">
-          <a href="#" className="text-[#6B0606] ">Tout nos produits</a>
-          <a href="#">Nail polishes</a>
-          <a href="#">Base de maquillage</a>
-          <a href="#">Rouge à lèvre</a>
-          <a href="#">Crème de nuit</a>
-          <a href="#">Mascaras</a>
-          <a href="#">Crayon à sourcil</a>
-        </nav>
-      </header>
-      <main className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-        {products.map((product, index) => (
+    <section className="py-12 bg-white">
+      <h1 className="text-center text-[#4A2501] text-2xl font-bold mb-8">
+        Découvrez nos offres et trouvez la maison de vos rêves, adaptée à vos besoins !
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4 mt-3">
+        {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow hover:shadow-lg transition p-3 text-center"
+            className="group bg-white border rounded-md shadow-md overflow-hidden transform transition duration-300 hover:bg-[#4A2501]"
           >
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-24 h-24 md:w-32 md:h-32 ml-14 object-contain rounded-md"
-            />
-            <h2 className="text-sm font-medium text-gray-800">{product.name}</h2>
+            <div className="relative overflow-hidden">
+              <img
+                src={feature.imageUrl}
+                alt={feature.title}
+                className="w-full h-48 object-cover transition-transform duration-300 transform group-hover:scale-110 group-hover:opacity-75"
+              />
+            </div>
+
+            <div className="p-4 text-center transition-colors duration-300 group-hover:text-white">
+              <h3 className="text-2sm font-bold">{feature.title}</h3>
+              <p className="text-gray-600 group-hover:text-gray-200 text-sm">
+                {feature.description}
+              </p>
+            </div>
           </div>
         ))}
-      </main>
-    </div>
+      </div>
+      <div className="justify-center mt-10">
+        <h1 className="font-bold text-center">
+          <Link
+            to="/services"
+            className="text-[#4A2501] hover:underline hover:text-[#DFBFA8] transition-colors"
+          >
+            Savoir plus sur nos offres
+          </Link>
+        </h1>
+      </div>
+    </section>
   );
 };
 
-export default App;
+export default Features;
